@@ -25,30 +25,30 @@ Point::Point(float x, float y) {
     this->y = y;
 };
 
-void Point::setX(float value) {
+void Point::set_x(float value) {
     x = value;
 };
 
-void Point::setY(float value) {
+void Point::set_y(float value) {
     y = value;
 };
 
-void Point::setXY(float x, float y) {
+void Point::set_xy(float x, float y) {
     this->x = x;
     this->y = y;
 };
 
-float Point::getX() {
+float Point::get_x() {
     return x;
 };
 
-float Point::getY() {
+float Point::get_y() {
     return y;
 };
 
 float Point::distance(Point *p){
     
-    return sqrt(pow(x - p->getX(), 2) + pow(y - p->getY(), 2));
+    return sqrt(pow(x - p->get_x(), 2) + pow(y - p->get_y(), 2));
 }
 
 std::ostream& operator<<(std::ostream& out, const Point& p){

@@ -14,7 +14,7 @@
 
 
 template <typename T>
-void removeElement(T* arr, int* n, T index) {
+void remove_element(T* arr, int* n, T index) {
     int total = *n;
     for (int i = index; i < total - 1; i++) {
         arr[i] = arr[i + 1];
@@ -23,7 +23,7 @@ void removeElement(T* arr, int* n, T index) {
 }
 
 template <typename T>
-void nullEachSecondElement(T* arr, int n) {
+void null_each_second_element(T* arr, int n) {
     for (int i = 0; i < n; i++) {
         if (i % 2 == 1) {
             arr[i] = 0;
@@ -32,11 +32,11 @@ void nullEachSecondElement(T* arr, int n) {
 }
 
 template <typename T>
-bool removeDuplicates(T* arr, int* n) {
+bool remove_duplicates(T* arr, int* n) {
     int i = 0, total = *n;
     while (i < *n - 1) {
         if (arr[i] == arr[i + 1]) {
-            removeElement(arr, n, i + 1);
+            remove_element(arr, n, i + 1);
         } else {
             i++;
         }
@@ -45,7 +45,7 @@ bool removeDuplicates(T* arr, int* n) {
 }
 
 template <typename T>
-void nullMaxElement(T* arr, int n) {
+void null_max_element(T* arr, int n) {
     T maxValue = *arr;
     for (int i = 0; i < n; i++) {
         if (maxValue < arr[i]) {
@@ -60,7 +60,7 @@ void nullMaxElement(T* arr, int n) {
 }
 
 template <typename T>
-void printArray(T* arr, int n) {
+void print_array(T* arr, int n) {
     std::cout << "Array (" << n << "): ";
     for (int i = 0; i < n; i++) {
         std::cout << arr[i];
@@ -72,11 +72,11 @@ void printArray(T* arr, int n) {
 }
 
 template <typename T>
-bool elementsAreEquial(T* arr, int n, int index) {
+bool elements_are_equal(T* arr, int n, int index) {
     if (index - 1 == (int)(n / 2)) {
         return true;
     } else {
-        return arr[index] == arr[n - index - 1] && elementsAreEquial(arr, n, index + 1);
+        return arr[index] == arr[n - index - 1] && elements_are_equal(arr, n, index + 1);
     }
 }
 

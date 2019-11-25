@@ -24,19 +24,19 @@ Circle::Circle(Point* center, float radius) {
     this->radius = radius;
 };
 
-void Circle::setRadius(float radius) {
+void Circle::set_radius(float radius) {
     this->radius = radius;
 };
 
-float Circle::getRadius() {
+float Circle::get_radius() {
     return this->radius;
 };
 
-void Circle::setCenter(Point* center) {
+void Circle::set_center(Point* center) {
     this->center = center;
 };
 
-Point* Circle::getCenter() {
+Point* Circle::get_center() {
     return this->center;
 };
 

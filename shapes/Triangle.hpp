@@ -18,17 +18,17 @@ public:
     Triangle();
     Triangle(Point*, Point*, Point*);
 
-    Point* getA();
-    Point* getB();
-    Point* getC();
+    Point* get_a();
+    Point* get_b();
+    Point* get_c();
 
-    float distanceA();
-    float distanceB();
-    float distanceC();
+    float distance_a();
+    float distance_b();
+    float distance_c();
     float perimetr();
     float area();
-    int getNumType();
-    std::string getStrType();
+    int get_num_type();
+    std::string get_str_type();
     
     static const int ISOSCELES;
     static const int EQUILATERAL;

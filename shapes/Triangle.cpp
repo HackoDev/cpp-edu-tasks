@@ -26,25 +26,25 @@ const std::string Triangle::EQUILATERAL_LABEL = "Раснобедренный";
 const std::string Triangle::RECTANGULAR_LABEL = "Прямоугольный";
 const std::string Triangle::ARBITARY_LABEL = "Произвольный";
 
-Point* Triangle::getA() {
+Point* Triangle::get_a() {
     return a;
 };
-Point* Triangle::getB() {
+Point* Triangle::get_b() {
     return b;
 };
-Point* Triangle::getC() {
+Point* Triangle::get_c() {
     return c;
 };
 
-float Triangle::distanceA() {
+float Triangle::distance_a() {
     return a->distance(b);
 }
 
-float Triangle::distanceB() {
+float Triangle::distance_b() {
     return b->distance(c);
 }
 
-float Triangle::distanceC() {
+float Triangle::distance_c() {
     return c->distance(a);
 }
 
@@ -54,12 +54,12 @@ float Triangle::perimetr() {
 
 float Triangle::area() {
     float pp = perimetr() / 2;
-    return sqrt(pp * (pp - distanceA()) * (pp - distanceB()) * (pp - distanceC()));
+    return sqrt(pp * (pp - distance_a()) * (pp - distance_b()) * (pp - distance_c()));
 };
 
 
-int Triangle::getNumType() {
-    float dA = distanceA(), dB = distanceB(), dC = distanceC();
+int Triangle::get_num_type() {
+    float dA = distance_a(), dB = distance_b(), dC = distance_c();
     if (dA == dB == dC) {
         return Triangle::ISOSCELES;
     } else if (dA == dB || dB == dC || dA == dC) {
@@ -71,8 +71,8 @@ int Triangle::getNumType() {
     }
 };
 
-std::string Triangle::getStrType() {
-    switch (getNumType()) {
+std::string Triangle::get_str_type() {
+    switch (get_num_type()) {
         case Triangle::ISOSCELES:
             return Triangle::ISOSCELES_LABEL;
             break;

@@ -16,10 +16,10 @@ class Circle {
 public:
     Circle();
     Circle(Point*, float);
-    void setRadius(float);
-    float getRadius();
-    void setCenter(Point*);
-    Point* getCenter();
+    void set_radius(float);
+    float get_radius();
+    void set_center(Point*);
+    Point* get_center();
     bool contains(Point*);
     float perimetr();
     float area();

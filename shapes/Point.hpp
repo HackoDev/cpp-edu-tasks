@@ -24,15 +24,15 @@ public:
 
     ~Point();
 
-    void setXY(float, float);
+    void set_xy(float, float);
 
-    void setX(float);
+    void set_x(float);
 
-    void setY(float);
+    void set_y(float);
 
-    float getX();
+    float get_x();
 
-    float getY();
+    float get_y();
 
     float distance(Point*);
 
