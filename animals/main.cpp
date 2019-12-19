@@ -8,7 +8,7 @@
 #include "birds/golub.hpp"
 #include "zoo/zoo.hpp"
 
-// g++ --std=c++11 main.cpp animal.cpp bird.cpp mammal.cpp reptile.cpp tireks.cpp golub.cpp
+// g++ --std=c++11 main.cpp base/animal.cpp base/creator.cpp birds/bird.cpp mammals/mammal.cpp reptiles/reptile.cpp reptiles/tireks.cpp birds/golub.cpp zoo/zoo.cpp
 
 int main(int argc, const char * argv[]) {
 	tireks* t = new tireks("Reks", 3);
